@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,height=700, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>ButtonStyler</title>
+	<link rel="stylesheet" href="css/buttonStyler.css" />
+	<script defer src="scripts/buttonStyler.js"></script>
+</head>
+<body>
+	<nav>
+		<h3>ButtonStyler</h3>
+		<select name="unit" id="unit">
+			<option value="px">px</option>
+			<option value="rem">rem</option>
+			<option value="%">%</option>
+			<option value="em">em</option>
+		</select>
+	</nav>
+	<div class="editor">
+		<button
+		contenteditable
+			>Edit Me</button>
+		</div>
+	<div class="edit-content">
+		<div class="background">
+			<span>Background</span>
+			<input type="text" id="bg">
+			<input type="color" name="cp" id="cp" value="" />
+		</div>
+		<div class="border-radius">
+			<span>Border Radius</span>
+			<input type="text" id="bd" value="0">
+			<input class="slider" type="range" name="bdr" id="bdr" min="0" max="100" value="0" />
+		</div>
+		<div class="border">
+			<span>Border</span>
+			<input type="text" id="bdWidthText" value="0">
+			<input class="slider" type="range" id="bdWidthRange" min="0" max="100" value="0" />
+			<div class="styles">
+				<div class="select">
+					<select name="_borderStyle" id="_borderStyle">
+						<option disabled selected>Select</option>
+						<option value="none">none</option>
+						<option value="solid">solid</option to>
+						<option value="dashed">dashed</option>
+						<option value="dotted">dotted</option>
+						<option value="inset">inset</option>
+						<option value="outset">outset</option>
+						<option value="ridge">ridge</option>
+						<option value="groove">groove</option>
+						<option value="double">double</option>
+						<option value="initial">initial</option>
+					</select>
+				</div>
+				<input type="text" name="bdcText" id="bdcText" value="" />
+				<input type="color" name="_borderColor" id="_borderColor" value="" />
+			</div>
+		</div>
+		<div class="font-size">
+			<span>Font Size</span>
+			<input type="text" id="f-s" value="0">
+			<input class="slider" type="range" name="_fs" id="_fs" min="0" max="100" value="0" />
+		</div>
+		<div class="font-color">
+			<span>Font Color</span>
+			<input style="min-width:30%" type="text" id="fontColor">
+			<input type="color" name="_fontColor" id="_fontColor" value="" />
+		</div>
+		<div class="padding">
+			<span>Paddings</span>
+			<span>Padding Y</span>
+			<input type="text" id="paddingY" value="0">
+			<input class="slider" type="range" name="_pt" id="_paddingY" min="0" max="100" value="0" />
+			<span>Padding X</span>
+			<input type="text" id="paddingX" value="0">
+			<input class="slider" type="range" name="_pt" id="_paddingX" min="0" max="100" value="0" />
+		</div>
+	</div>
+	<script src="https://unpkg.com/range-slider-customizer"> </script>
+	<script>
+		range.create("input[type=range]",{
+			progressColor: "#00d639",
+			width: "70%",
+			margin: "1rem 0",
+			height: "10px",
+			thumb: {
+				background: '#01cb37',
+				borderRadius: '0px',
+				height: '20px',
+				hover: {
+					boxShadow: '0 0 0 10px #00d6396b',
+				},
+  		},
+		})
+		</script>
+</body>
+</html>
